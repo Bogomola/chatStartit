@@ -2,6 +2,7 @@
 const API="https://chat2022.jekaterinabogom.repl.co"
 let zina=document.querySelector('.manaZina'); 
 let zinas=document.querySelector('.chataZinas');
+let vards=document.querySelector('.vards') 
 
 
 function sutitZinu()
@@ -10,7 +11,7 @@ function sutitZinu()
     zinas.innerHTML=zinas.innerHTML+ '<br/>'+zina.value;
 
 
-   fetch(API+"/sutit/Juris/"+zina.value)
+   fetch(API+"/sutit/"+vards.value+"/"+zina.value)
 }
 async function ieladetChataZinas()
 {
