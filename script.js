@@ -1,4 +1,5 @@
 //console.log(2)
+const API="https://chat2022.jekaterinabogom.repl.co"
 let zina=document.querySelector('.manaZina'); 
 let zinas=document.querySelector('.chataZinas');
 
