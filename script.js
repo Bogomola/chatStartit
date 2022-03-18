@@ -27,14 +27,16 @@ async function ieladetChataZinasJson()
 let datiNoServera = await fetch(API+"/lasit");
 let dati = await  datiNoServera.json();
 //console.log(await dati[0]['zina'])
-
+zinas.innerHTML=''//pirms cikla, pirms visam ziņam laukums tiek iztirīts
 i=0;
 while (i < await dati.length)
 {
 console.log(i);
-zinas.innerHTML=zinas.innerHTML+dati[i]['zina']
+zinas.innerHTML=zinas.innerHTML+dati[i]['vards']+": "+dati[i]['zina']+"<br/>"
 i=i+1;
 }
 
-
+zinas.scrollTop=zinas.scrollHeight; //Čats rullejas automatiski uz leju
 }//šeit beidzas funkcija ieladetChataZinasJson()
+
+setInterval(ieladetChataZinasJson, 1000)
